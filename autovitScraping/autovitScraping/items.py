@@ -10,5 +10,12 @@ import scrapy
 
 class AutovitscrapingItem(scrapy.Item):
     # define the fields for your item here like:
-    # name = scrapy.Field()
+    title = scrapy.Field()
+    city = scrapy.Field()
+    county = scrapy.Field()
+    year = scrapy.Field()
+    km = scrapy.Field()
+    engine = scrapy.Field()
+    fuel = scrapy.Field()
+    price = scrapy.Field()
     pass

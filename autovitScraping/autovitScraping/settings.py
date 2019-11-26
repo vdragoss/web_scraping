@@ -17,6 +17,7 @@ NEWSPIDER_MODULE = 'autovitScraping.spiders'
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'autovitScraping (+http://www.yourdomain.com)'
+USER_AGENT = 'Google'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
