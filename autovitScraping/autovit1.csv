@@ -1,65 +1,94 @@
-city,county,engine,fuel,km,price,title,year
-Galati,(Galati),1 461 cm3,Diesel,188 000 km,5 690,"
-                        Renault Megane                                    ",2013 
-Brasov,(Brasov),1 332 cm3,Benzina,1 000 km,40 448,"
-                        Mercedes-Benz A 200                                    ",2019 
-Otopeni,(Bucuresti - Ilfov),1 968 cm3,Diesel,154 874 km,9 490,"
-                        Volkswagen Passat CC                                    ",2008 
-Otopeni,(Bucuresti - Ilfov),1 968 cm3,Diesel,152 472 km,8 990,"
-                        Volkswagen Passat B7                                    ",2014 
-Pitesti,(Arges),1 995 cm3,Diesel,19 990 km,40 341,"
-                        BMW Seria 5 520                                    ",2019 
-Focsani,(Vrancea),1 989 cm3,Diesel,190 000 km,11 200,"
-                        Audi A4                                    ",2015 
-Bucuresti,(Bucuresti - Ilfov),1 598 cm3,Diesel,70 917 km,11 800,"
-                        Volkswagen Passat                                    ",2014 
-Timisoara,(Timis),2 000 cm3,Diesel,240 000 km,3 999,"
-                        Volkswagen Passat                                    ",2006 
-Bucuresti,(Bucuresti - Ilfov),1 995 cm3,Diesel,88 500 km,13 994,"
-                        Hyundai ix35                                    ",2014 
-Bucuresti,(Bucuresti - Ilfov),2 993 cm3,Diesel,72 437 km,36 999,"
-                        BMW X5                                    ",2015 
-Bucuresti,(Bucuresti - Ilfov),2 143 cm3,Diesel,131 185 km,21 896,"
-                        Mercedes-Benz C 220                                    ",2015 
-Bucuresti,(Bucuresti - Ilfov),1 461 cm3,Diesel,88 949 km,7 200,"
-                        Renault Clio                                    ",2016 
-Bucuresti,(Bucuresti - Ilfov),1 598 cm3,Diesel,25 623 km,13 500,"
-                        Volkswagen Golf                                    ",2017 
-Bucuresti,(Bucuresti - Ilfov),1 968 cm3,Diesel,43 404 km,36 899,"
-                        Audi A5                                    ",2019 
-Bucuresti,(Bucuresti - Ilfov),1 995 cm3,Diesel,96 020 km,20 999,"
-                        Hyundai Tucson                                    ",2017 
-Arad,(Arad),2 987 cm3,Diesel,16 000 km,59 012,"
-                        Mercedes-Benz GLE 350                                    ",2017 
-Otopeni,(Bucuresti - Ilfov),2 993 cm3,Diesel,218 324 km,13 990,"
-                        BMW X5                                    ",2010 
-Bucuresti,(Bucuresti - Ilfov),2 993 cm3,Diesel,2 900 km,98 999,"
-                        BMW Seria 7 740                                    ",2019 
-Ploiesti,(Prahova),1 968 cm3,Diesel,185 000 km,15 690,"
-                        Audi A5                                    ",2015 
-Ploiesti,(Prahova),1 997 cm3,Diesel,159 000 km,12 990,"
-                        Ford Kuga                                    ",2015 
-Bucuresti,(Bucuresti - Ilfov),1 600 cm3,Diesel,145 000 km,9 350,"
-                        Škoda Octavia III                                    ",2015 
-Pitesti,(Arges),1 968 cm3,Diesel,131 340 km,8 490,"
-                        Škoda Octavia                                    ",2011 
-Cluj-Napoca,(Cluj),1 998 cm3,Diesel,200 000 km,10 990,"
-                        Ford Mondeo                                    ",2015 
-Brasov,(Brasov),1 950 cm3,Diesel,1 000 km,62 951,"
-                        Mercedes-Benz E 220                                    ",2019 
-Cluj-Napoca,(Cluj),1 560 cm3,Diesel,218 425 km,4 990,"
-                        Ford Mondeo Mk3                                    ",2012 
-Targoviste,(Dambovita),1 398 cm3,Benzina,185 000 km,2 590,"
-                        Volkswagen Golf IV                                    ",2004 
-Bucuresti,(Bucuresti - Ilfov),1 968 cm3,Diesel,187 000 km,14 999,"
-                        Audi A6                                    ",2014 
-Timisoara,(Timis),1 600 cm3,Benzina,210 000 km,3 499,"
-                        BMW Seria 1 116                                    ",2005 
-Bucuresti,(Bucuresti - Ilfov),1 600 cm3,Diesel,168 000 km,12 190,"
-                        Volkswagen Passat B8                                    ",2016 
-Targoviste,(Dambovita),1 968 cm3,Diesel,160 000 km,12 650,"
-                        Volkswagen Golf VII                                    ",2014 
-Bucuresti,(Bucuresti - Ilfov),1 390 cm3,Benzina,235 000 km,9 900,"
-                        Volkswagen Passat CC                                    ",2012 
-Bucuresti,(Bucuresti - Ilfov),1 600 cm3,Diesel,177 000 km,9 150,"
-                        Škoda Octavia III                                    ",2015 
+body_style,condition,country,drive,engine_size,euro,fuel,km,link,location,make,model,no_accident,power,price,registered,seller,service_history,transmission,version,year
+"
+                Sedan                ","
+                Second hand                ","
+                Germania                ","
+                4x4 (automat)                ","
+                1 968 cm3        ","
+                Euro 6                ","
+                Diesel                ","
+                183 000 km        ",,"
+                                                Bulevardul 1 Decembrie 1918 nr. 1 - 510207 Alba Iulia, Judet Alba (Romania)                                    ,
+                                                Bulevardul 1 Decembrie 1918 nr. 1 - 510207 Alba Iulia, Judet Alba (Romania)                                    ,
+                                                Bulevardul 1 Decembrie 1918 nr. 1 - 510207 Alba Iulia, Judet Alba (Romania)                                    ","
+                Audi                ","
+                A4                ","
+                Da                ","
+                190 CP        ","22 990        ,
+    ,22 990        ,
+    ,22 990        ,
+    ",na,"
+                Firma                ","
+                Da                ","
+                Automata                ",na,"
+                2017         "
+"
+                SUV                ","
+                Second hand                ","
+                Germania                ","
+                4x4 (automat)                ","
+                1 968 cm3        ","
+                Euro 5                ","
+                Diesel                ","
+                166 000 km        ",,"
+                                                Timisoara, Judet Timis                                    ,
+                                                Timisoara, Judet Timis                                    ,
+                                                Timisoara, Judet Timis                                    ","
+                Audi                ","
+                Q5                ","
+                Da                ","
+                177 CP        ","17 500        ,
+    ,17 500        ,
+    ,17 500        ,
+    ","
+                Da                ","
+                Proprietar                ",na,"
+                Automata                ",na,"
+                2013         "
+body_style,condition,country,drive,engine_size,euro,fuel,km,link,location,make,model,no_accident,power,price,registered,seller,service_history,transmission,version,year
+"
+                Sedan                ","
+                Second hand                ","
+                Germania                ","
+                4x4 (automat)                ","
+                1 968 cm3        ","
+                Euro 6                ","
+                Diesel                ","
+                183 000 km        ",,"
+                                                Bulevardul 1 Decembrie 1918 nr. 1 - 510207 Alba Iulia, Judet Alba (Romania)                                    ,
+                                                Bulevardul 1 Decembrie 1918 nr. 1 - 510207 Alba Iulia, Judet Alba (Romania)                                    ,
+                                                Bulevardul 1 Decembrie 1918 nr. 1 - 510207 Alba Iulia, Judet Alba (Romania)                                    ","
+                Audi                ","
+                A4                ","
+                Da                ","
+                190 CP        ","22 990        ,
+    ,22 990        ,
+    ,22 990        ,
+    ",na,"
+                Firma                ","
+                Da                ","
+                Automata                ",na,"
+                2017         "
+"
+                SUV                ","
+                Second hand                ","
+                Germania                ","
+                4x4 (automat)                ","
+                1 968 cm3        ","
+                Euro 5                ","
+                Diesel                ","
+                166 000 km        ",,"
+                                                Timisoara, Judet Timis                                    ,
+                                                Timisoara, Judet Timis                                    ,
+                                                Timisoara, Judet Timis                                    ","
+                Audi                ","
+                Q5                ","
+                Da                ","
+                177 CP        ","17 500        ,
+    ,17 500        ,
+    ,17 500        ,
+    ","
+                Da                ","
+                Proprietar                ",na,"
+                Automata                ",na,"
+                2013         "

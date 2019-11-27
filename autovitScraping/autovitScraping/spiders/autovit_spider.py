@@ -2,38 +2,87 @@ import scrapy
 from ..items import AutovitscrapingItem
 
 
-class autovit(scrapy.Spider):
-    name = 'autovit_spider'
-    page_number = 2
-    start_urls = ['https://www.autovit.ro/autoturisme/second/?search%5Bfilter_float_price%3Afrom%5D=100&search%5Border%5D=created_at%3Adesc&page=1']
+class autovit_carinfo(scrapy.Spider):
+    name = 'autovit_carinfo'
+    # page_number = 2
+    start_urls = ['https://www.autovit.ro/anunt/audi-a4-ID7Gz8b3.html']
 
     def parse(self, response):
         items = AutovitscrapingItem()
-        nr_of_ads = len(response.css('.ds-param:nth-child(1) span').css('::text').extract())
+        parameters = response.css('div.offer-params ul li.offer-params__item')
 
-        for ad in range(nr_of_ads):
-            title = response.css('.offer-title__link::text')[ad].extract()
-            city = response.css('.ds-location-city::text')[ad].extract()
-            county = response.css('.ds-location-region::text')[ad].extract()
-            year = response.css('.ds-param:nth-child(1) span').css('::text')[ad].extract()
-            km = response.css('.ds-param:nth-child(2) span::text')[ad].extract()
-            engine = response.css('.ds-param:nth-child(3) span::text')[ad].extract()
-            fuel = response.css('.ds-param:nth-child(4) span::text')[ad].extract()
-            price = response.css('.ds-price-number span:nth-child(1)::text')[ad].extract()
+        seller=make=model=version=year=km=engine_size=fuel=power=transmission=drive=euro=body_style=country=no_accident=service_history=condition=registered=price=location = 'na'
+        for param in parameters:
 
-            items['title'] = title
-            items['city'] = city
-            items['county'] = county
-            items['year'] = year
-            items['km'] = km
-            items['engine'] = engine
-            items['fuel'] = fuel
-            items['price'] = price
+            header = param.css('span::text').extract()[0]
+            if param.css('a::text').extract():
+                content = param.css('a::text').extract()
+            else:
+                content = param.css('div::text').extract()
 
-            yield items
+            if header == "Oferit de":
+                seller = content
+            elif header == "Marca":
+                make = content
+            elif header == "Model":
+                model = content
+            elif header == "Versiune":
+                version = content
+            elif header == "Anul fabricatiei":
+                year = content
+            elif header == "Km":
+                km = content
+            elif header == "Capacitate cilindrica":
+                engine_size = content
+            elif header == "Combustibil":
+                fuel = content
+            elif header == "Putere":
+                power = content
+            elif header == "Cutie de viteze":
+                transmission = content
+            elif header == "Norma de poluare":
+                euro = content
+            elif header == "Transmisie":
+                drive = content
+            elif header == "Caroserie":
+                body_style = content
+            elif header == "Tara de origine":
+                country = content
+            elif header == "Fara accident in istoric":
+                no_accident = content
+            elif header == "Carte de service":
+                service_history = content
+            elif header == "Stare":
+                condition = content
+            elif header == "Inmatriculat":
+                registered = content
 
-        # next_page = f'http://quotes.toscrape.com/page/{Quotes.page_number}/'
-        #
-        # if Quotes.page_number < 11:
-        #     Quotes.page_number += 1
-        #     yield response.follow(next_page, callback = self.parse)
+        price = response.css('.offer-price__number::text').extract()
+        location = response.css(".seller-box__seller-address__label::text").extract()
+
+        items['seller'] = seller
+        items['make'] = make
+        items['model'] = model
+        items['version'] = version
+        items['year'] = year
+        items['km'] = km
+        items['engine_size'] = engine_size
+        items['fuel'] = fuel
+        items['power'] = power
+        items['transmission'] = transmission
+        items['drive'] = drive
+        items['euro'] = euro
+        items['body_style'] = body_style
+        items['country'] = country
+        items['no_accident'] = no_accident
+        items['service_history'] = service_history
+        items['registered'] = registered
+        items['condition'] = condition
+        items['location'] = location
+        items['price'] = price
+        # items['link'] = link
+
+        yield items
+
+        next_page = 'https://www.autovit.ro/anunt/audi-q5-ID7GzScv.html'
+        yield response.follow(next_page, callback = self.parse)

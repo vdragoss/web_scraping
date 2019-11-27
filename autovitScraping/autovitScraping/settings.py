@@ -17,7 +17,7 @@ NEWSPIDER_MODULE = 'autovitScraping.spiders'
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'autovitScraping (+http://www.yourdomain.com)'
-USER_AGENT = 'Google'
+# USER_AGENT = 'Google'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
@@ -45,11 +45,30 @@ ROBOTSTXT_OBEY = True
 #   'Accept-Language': 'en',
 #}
 
-# Enable or disable spider middlewares
+
+
+
+# Enable or disable spider middlewaress
 # See https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
 #    'autovitScraping.middlewares.AutovitscrapingSpiderMiddleware': 543,
 #}
+
+# ROTATING_PROXY_LIST_PATH = 'autovitScraping\\proxies.txt'
+# ROTATING_PROXY_BACKOFF_BASE = 30
+
+# PROXY_POOL_ENABLED = True
+
+DOWNLOADER_MIDDLEWARES = {
+    'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware': None,
+    'scrapy_user_agents.middlewares.RandomUserAgentMiddleware': 400,
+    # 'scrapy_proxy_pool.middlewares.ProxyPoolMiddleware': 610,
+    # 'scrapy_proxy_pool.middlewares.BanDetectionMiddleware': 620,
+    # 'rotating_proxies.middlewares.RotatingProxyMiddleware': 610,
+    # 'rotating_proxies.middlewares.BanDetectionMiddleware': 620,
+
+}
+
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
