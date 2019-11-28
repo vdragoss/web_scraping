@@ -30,7 +30,8 @@ class AutovitscrapingItem(scrapy.Item):
     condition = scrapy.Field()
     location = scrapy.Field()
     price = scrapy.Field()
-    links = scrapy.Field()
+    link = scrapy.Field()
+    currency = scrapy.Field()
     pass
 
 class AutovitLinks(scrapy.Item):

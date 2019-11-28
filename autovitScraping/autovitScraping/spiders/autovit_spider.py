@@ -4,8 +4,8 @@ from ..items import AutovitscrapingItem
 
 class autovit_carinfo(scrapy.Spider):
     name = 'autovit_carinfo'
-    # page_number = 2
-    start_urls = ['https://www.autovit.ro/anunt/audi-a4-ID7Gz8b3.html']
+    with open("links.txt") as f:
+         start_urls = [url.strip() for url in f.readlines()]
 
     def parse(self, response):
         items = AutovitscrapingItem()
@@ -57,8 +57,9 @@ class autovit_carinfo(scrapy.Spider):
             elif header == "Inmatriculat":
                 registered = content
 
-        price = response.css('.offer-price__number::text').extract()
-        location = response.css(".seller-box__seller-address__label::text").extract()
+        price = response.css('.offer-price__number::text')[0].extract()
+        currency = response.css('.offer-price__currency::text')[0].extract()
+        location = response.css(".seller-box__seller-address__label::text")[0].extract()
 
         items['seller'] = seller
         items['make'] = make
@@ -80,9 +81,11 @@ class autovit_carinfo(scrapy.Spider):
         items['condition'] = condition
         items['location'] = location
         items['price'] = price
-        # items['link'] = link
+        # items['link'] = autovit_carinfo.start_urls
+        items['currency'] = currency
 
         yield items
 
-        next_page = 'https://www.autovit.ro/anunt/audi-q5-ID7GzScv.html'
-        yield response.follow(next_page, callback = self.parse)
+        # next_page = 'https://www.autovit.ro/anunt/audi-q5-ID7GzScv.html'
+        # for i in range(len(links)):
+        #     yield response.follow(links[i], callback = self.parse)

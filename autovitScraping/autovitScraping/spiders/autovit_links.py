@@ -6,6 +6,7 @@ class autovit_links(scrapy.Spider):
     name = 'autovit_links'
     page_number = 2
     start_urls = ['https://www.autovit.ro/autoturisme/?search%5Bfilter_float_price%3Afrom%5D=1&search%5Border%5D=created_at%3Adesc&search%5Bcountry%5D=&page=1']
+    f = open("links.txt", "w")
 
     def parse(self, response):
         items = AutovitLinks()
@@ -20,6 +21,6 @@ class autovit_links(scrapy.Spider):
 
         next_page = f'https://www.autovit.ro/autoturisme/?search%5Bfilter_float_price%3Afrom%5D=1&search%5Border%5D=created_at%3Adesc&search%5Bcountry%5D=&page={autovit_links.page_number}'
 
-        if autovit_links.page_number < 5:
-            autovit_links.page_number += 1
-            yield response.follow(next_page, callback = self.parse)
+        # if autovit_links.page_number < 3:
+        #     autovit_links.page_number += 1
+        #     yield response.follow(next_page, callback = self.parse)
