@@ -20,7 +20,6 @@ class autovit_links(scrapy.Spider):
         yield items
 
         next_page = f'https://www.autovit.ro/autoturisme/?search%5Bfilter_float_price%3Afrom%5D=1&search%5Border%5D=created_at%3Adesc&search%5Bcountry%5D=&page={autovit_links.page_number}'
-
-        # if autovit_links.page_number < 3:
-        #     autovit_links.page_number += 1
-        #     yield response.follow(next_page, callback = self.parse)
+        if autovit_links.page_number <= 500:
+            autovit_links.page_number += 1
+            yield response.follow(next_page, callback = self.parse)

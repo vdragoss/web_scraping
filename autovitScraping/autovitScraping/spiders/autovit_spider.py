@@ -4,7 +4,7 @@ from ..items import AutovitscrapingItem
 
 class autovit_carinfo(scrapy.Spider):
     name = 'autovit_carinfo'
-    with open("links.txt") as f:
+    with open("links_backup.txt") as f:
          start_urls = [url.strip() for url in f.readlines()]
 
     def parse(self, response):
